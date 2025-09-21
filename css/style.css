@@ -1,0 +1,49 @@
+/* Reset browser defaults a little */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Give the whole page a nice dark bluish background */
+body {
+  background-color: #0d1b2a; /* very deep navy blue */
+  color: #e0e1dd;            /* soft light text color */
+  font-family: sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b263b;  /* a slightly lighter dark blue */
+  padding: 0.5rem 1rem;
+}
+
+/* Logo with a contrasting border */
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00aaff;  /* nice cyan/sky-blue pop against navbar */
+}
+
+/* Navigation links styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e0e1dd;    /* light text for contrast */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00aaff;    /* cyan hover highlight */
+}
+
