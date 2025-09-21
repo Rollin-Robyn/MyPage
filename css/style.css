@@ -1,49 +1,89 @@
-/* Reset browser defaults a little */
-body, ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* Give the whole page a nice dark bluish background */
 body {
-  background-color: #0d1b2a; /* very deep navy blue */
-  color: #e0e1dd;            /* soft light text color */
-  font-family: sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2a2a2a, #3c3c3c, #4b3f54);
+  color: #e0e0e0; 
+  display: flex;
+  min-height: 100vh;
 }
 
-/* Navbar styling */
-.navbar {
+/* Sidebar (dark with flex sections) */
+.sidebar {
+  width: 160px;
+  background: linear-gradient(180deg, #131313, #1e1e1e, #2d1b38);
+  border-right: 3px solid #0a0a0a;
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: normal; /* pushes Main to middle, Info to bottom */
   align-items: center;
-  background-color: #1b263b;  /* a slightly lighter dark blue */
-  padding: 0.5rem 1rem;
+  padding: 1rem 0;
+  position: fixed;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.5);
 }
 
-/* Logo with a contrasting border */
-.logo img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.sidebar-logo {
+  padding-bottom: 10px;
+  border-bottom: 3px dashed #000000;
+}
+
+/* Logo (Top) */
+.sidebar-logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
   object-fit: cover;
-  border: 2px solid #00aaff;  /* nice cyan/sky-blue pop against navbar */
+  border: 3px solid #6a0dad;
+  box-shadow: 0 0 10px rgba(106,13,173,0.5);
+  margin-bottom: 1rem;
+  margin-top: 15px;
 }
 
-/* Navigation links styling */
-.nav-links {
-  list-style: none;
+/* Main navigation (Middle) */
+.sidebar-main {
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px; /* spacing between icons */
+  margin-top: 30px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #e0e1dd;    /* light text for contrast */
+/* Info navigation (Bottom) */
+.sidebar-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 530px;
+  margin-bottom: 1rem;
+}
+
+/* Shared nav styles */
+.sidebar a img {
+  width: 35px;
+  filter: grayscale(100%) brightness(70%);
+  transition: filter 0.3s, transform 0.2s;
+}
+
+.sidebar a:hover img {
+  filter: grayscale(0%) brightness(100%) drop-shadow(0 0 6px #a259ff);
+  transform: scale(1.2);
+}
+
+/* Main content */
+.content {
+  margin-left: 160px;
+  padding: 2rem;
+  flex: 1;
+  text-align: center;
+  background: linear-gradient(180deg, #131313, #1e1e1e, #2d1b38);
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.4);
+}
+
+/* Main title */
+.main-title {
+  font-size: 2.8rem;
   font-weight: bold;
-  transition: color 0.3s;
+  color: #f2f2f2;
+  text-shadow: 0 2px 8px rgba(162, 89, 255, 0.6);
+  margin-top: 20px;
 }
-
-.nav-links a:hover {
-  color: #00aaff;    /* cyan hover highlight */
-}
-
