@@ -1,1 +1,3 @@
+# Hey Welcome to my Github!
+
 [![robingamer9's Discord status](https://dsc-readme.tsuni.dev/api/user/455033871696920596?theme=dark&width=512)](https://github.com/TetraTsunami/discord-github-preview)
